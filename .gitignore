@@ -1,2 +1,36 @@
-env
+# Ignore environment configuration
+.env
 
+# Ignore cache and logs
+writable/cache/*
+writable/debugbar/*
+writable/logs/*
+writable/session/*
+writable/tmp/*
+writable/uploads/*
+
+# Ignore Composer dependencies (if applicable)
+vendor/
+
+# Ignore Node.js dependencies (if applicable)
+node_modules/
+
+# Ignore IDE and editor-specific files
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore PHPStorm settings
+.phpstorm.meta.php
+
+# Ignore deployment files
+.env.example
+.env.*
