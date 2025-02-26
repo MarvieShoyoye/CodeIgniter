@@ -24,4 +24,13 @@ $routes->group('api', function ($routes) {
     $routes->post('posts', 'PostsController::store', ['filter' => 'auth']);
     $routes->put('posts/(:num)', 'PostsController::update/$1', ['filter' => 'auth']);
     $routes->delete('posts/(:num)', 'PostsController::delete/$1', ['filter' => 'auth']);
+
+
+    //Admin routes 
+     $routes->post('create', 'AdminController::createAdmin');
+    $routes->post('login', 'AdminController::login');
+    $routes->get('all', 'AdminController::getAdmins', ['filter' => 'auth']);
+    $routes->get('view/(:num)', 'AdminController::viewAdmin/$1', ['filter' => 'auth']);
+    $routes->put('update/(:num)', 'AdminController::updateAdmin/$1', ['filter' => 'auth']);
+    $routes->delete('delete/(:num)', 'AdminController::deleteAdmin/$1', ['filter' => 'auth']);
 });
